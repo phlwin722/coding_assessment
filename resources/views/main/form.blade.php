@@ -12,7 +12,7 @@
                     </div>
                     <div class="mt-2">
                         <label for="description">Description</label>
-                        <textarea name="" id="description" class="border block mt-1 border-gray-300 w-90"></textarea>
+                        <textarea name="" id="description" class="p-2 border block mt-1 border-gray-300 w-90"></textarea>
                         <p id="description-error" class="mt-1 text-red-500 text-sm hidden"></p>
                     </div>
                     <div class="mt-2">

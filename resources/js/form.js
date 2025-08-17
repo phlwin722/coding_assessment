@@ -2,19 +2,12 @@ import axiosClient from "./axiosClient";
 import Swal from "sweetalert2";
 
 document.addEventListener("DOMContentLoaded", async() => {
-    const token = localStorage.getItem("access_token");
-
-    if (!token) {
-        localStorage.removeItem("access_token");
-        window.location.href = "signin";
-        return;
-    }
 
     const pathSegments = window.location.pathname.split("/");
     const id = pathSegments[pathSegments.length - 1];
 
     const isEditMove = !isNaN(parseInt(id));
-    
+
 
     if (isEditMove) {
         try {

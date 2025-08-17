@@ -2,12 +2,6 @@ import axiosClient from "./axiosClient";
 import Swal from "sweetalert2";
 
 document.addEventListener("DOMContentLoaded", () => {
-    const token = localStorage.getItem("access_token");
-    if (!token) {
-        localStorage.removeItem("access_token");
-        window.location.href = "signin";
-        return;
-    }
 
     const sidebarBtn = document.getElementById('sidabar-button');
     const sidebarMobile = document.getElementById('sidebar-mobile');

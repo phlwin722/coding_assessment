@@ -3,12 +3,6 @@ import axiosClient from './axiosClient';
 import Swal from 'sweetalert2'
 
 document.addEventListener('DOMContentLoaded', () => {
-    const token = localStorage.getItem('access_token');
-
-    if (token) {
-        window.location.href='movie'
-        return;
-    }
 
     const form = document.getElementById('signup-form')
 

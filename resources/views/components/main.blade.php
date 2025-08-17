@@ -6,9 +6,22 @@
     <title>{{ $title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @vite(['resources/css/app.css', 'resources/js/form.js', 'resources/js/movie.js'])
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const token = localStorage.getItem('access_token');
+
+            if (token) {
+                document.getElementById('body').classList.remove('hidden')
+            } else {
+                window.location.href = 'signin'
+                return;
+            }
+        });
+    </script>
 </head>
 
-<body class="bg-gray-100 min-h-screen flex flex-col">
+<body id="body" class="hidden bg-gray-100 min-h-screen flex flex-col">
 
     <!-- Overlay Background -->
     <div id="overlay" class="fixed inset-0 bg-[rgba(0,0,0,0.3)] bg-opacity-30 hidden z-40"></div>
@@ -26,7 +39,7 @@
             <p class="font-semibold text-2xl">Main Navigation</p>
         </div>
         <div>
-           <p id="user_info"></p>
+            <p id="user_info"></p>
         </div>
     </nav>
 

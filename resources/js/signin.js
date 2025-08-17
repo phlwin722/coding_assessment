@@ -2,13 +2,6 @@ import axiosClient from "./axiosClient";
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const token = localStorage.getItem('access_token');
-
-    if (token) {
-        window.location.href='movie';
-        return;
-    }
-
     const form = document.getElementById("signin-form");
 
     if (form) {
