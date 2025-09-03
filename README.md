@@ -13,6 +13,9 @@ npm install
 ```bash
 quasar dev
 ```
+```bash
+php artisan serve --port-8002
+```
 
 
 ### Build the app for production
